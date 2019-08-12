@@ -8,6 +8,7 @@
         <script src="lib/three.min.js"></script>
         <script src="lib/TrackballControls.js"></script>
         <script src="lib/jquery.min.js"></script>
+        <script src="https://unpkg.com/@esri/arcgis-to-geojson-utils"></script>
     </head>
     <body>
         <style>
@@ -40,6 +41,7 @@
 
             //Draw the GeoJSON
             $.getJSON("test_geojson/countries.json", function(data) {
+                
                 drawThreeGeo(data, 10, 'sphere', {
                     color: 0x80FF80
                 }, planet);

@@ -39,7 +39,10 @@
             planet.add(sphere);
 
             //Draw the GeoJSON
-            $.getJSON("https://raw.githubusercontent.com/kyangTRC/geoJson/master/www/test_geojson/ReevesTX_Example_Formatted%2011.02.20%20AM.json", function(data) {
+            $.getJSON("https://raw.githubusercontent.com/kyangTRC/geoJson/master/www/test_geojson/ReevesTX_Example_Formatted%2011.02.20%20AM.json", function(_data) 
+            {
+
+                var data = ArcgisToGeojsonUtils.arcgisToGeoJSON(_data);
                 drawThreeGeo(data, 10, 'sphere', {
                     color: 0x80FF80
                 }, planet);
