@@ -22,6 +22,10 @@ handlers:
    static_files: www/index.html
    upload: www/index.html
 
+ - url: /reeves.html
+   static_files: www/reeves.html
+   upload: www/reeves.html
+
  - url: /(.*)
    static_files: www/(.*)
    upload: www/(.*)

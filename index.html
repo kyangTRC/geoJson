@@ -39,9 +39,15 @@
             planet.add(sphere);
 
             //Draw the GeoJSON
-            $.getJSON("https://raw.githubusercontent.com/kyangTRC/geoJson/master/www/test_geojson/ReevesTX_Example_Formatted.json", function(data) {
+            $.getJSON("test_geojson/countries.json", function(data) {
                 drawThreeGeo(data, 10, 'sphere', {
                     color: 0x80FF80
+                }, planet);
+            });
+
+            $.getJSON("test_geojson/rivers.geojson", function(data) {
+                drawThreeGeo(data, 10, 'sphere', {
+                    color: 0x8080FF
                 }, planet);
             });
 
