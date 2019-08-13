@@ -35,7 +35,7 @@
 
 <script>
 import ArcgisToGeojsonUtils from '@esri/arcgis-to-geojson-utils';
-import axios from "axios";
+
 export default {
   name: 'JsonToGeojsonForm',
   props: ['placeholder'],
@@ -59,10 +59,14 @@ export default {
   },
   methods: {
     convert: function() {
-    let inputJson = false;
-    axios.get("https://raw.githubusercontent.com/kyangTRC/geoJson/master/www/test_geojson/ReevesTX_Example_Formatted%2011.02.20%20AM.json")
-    .then(
-     inputJson => { if(inputJson) {
+      let inputJson = false;
+      try {
+        inputJson = JSON.parse(this.inputJson);
+      } catch (e) {
+        this.resultJson = 'Invalid JSON. Please check using jsonlint.com.';
+      }
+
+      if(inputJson) {
         try {
           this.showWgs84Alert = false;
           if(inputJson.hasOwnProperty('spatialReference') && inputJson.spatialReference.hasOwnProperty('wkid') && inputJson.spatialReference.wkid !==4326) {
@@ -90,10 +94,6 @@ export default {
           this.resultJson = 'Invalid input.';
         }
       }
-      }
-    )
-
-
     },
     onCopy() {
       this.copyText = 'Copied';

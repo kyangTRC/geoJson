@@ -34,7 +34,7 @@ export default {
   name: 'app',
   data () {
     return {
-      title: 'Convert ArcGIS JSON to GeoJSON',
+      title: 'TRC Connector',
       geojson: false
     }
   },
