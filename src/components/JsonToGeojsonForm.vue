@@ -61,7 +61,7 @@ export default {
     convert: function() {
     let inputJson = false;
     axios.get("https://raw.githubusercontent.com/kyangTRC/geoJson/master/www/test_geojson/ReevesTX_Example_Formatted%2011.02.20%20AM.json")
-    .then(response =>JSON.parse(response)).then(
+    .then(
      inputJson => { if(inputJson) {
         try {
           this.showWgs84Alert = false;
