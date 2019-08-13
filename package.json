@@ -1,0 +1,53 @@
+{
+  "name": "arcgis-json-to-geojson",
+  "description": "Convert ArcGIS JSON to GeoJSON",
+  "version": "2.0.0",
+  "author": "Gavin Rehkemper <gavin@gavinr.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@esri/arcgis-to-geojson-utils": "^1.3.0",
+    "bootstrap": "^4.3.1",
+    "esri-leaflet": "^2.2.4",
+    "leaflet": "^1.5.1",
+    "vue": "^2.6.10",
+    "vue-clipboard2": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
